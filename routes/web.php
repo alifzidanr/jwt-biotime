@@ -24,9 +24,13 @@ Route::get('/login', [AuthController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
-// Protecting routes with authentication
-Route::middleware(['auth'])->group(function () {
-    Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
-    Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
-    Route::get('/fetch-employees', [EmployeeController::class, 'index']);
-});
+// // Protecting routes with authentication
+// Route::middleware(['auth'])->group(function () {
+//     Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
+//     Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+//     Route::get('/fetch-employees', [EmployeeController::class, 'index']);
+// });
+
+Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
+Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
+Route::get('/fetch-employees', [EmployeeController::class, 'index']);

@@ -22,7 +22,9 @@
             "paging": true,
             "searching": true,
             "ordering": true,
-            "info": true
+            "info": true,
+            "pageLength": 100 
         });
     });
 </script>
+

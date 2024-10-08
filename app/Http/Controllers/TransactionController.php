@@ -13,10 +13,10 @@ class TransactionController extends Controller
         // JWT Token for authorization
         $jwtToken = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNzI4Nzg0OTQ1LCJlbWFpbCI6InN1YmFndGlAYWwtYXpoYXIub3IuaWQiLCJvcmlnX2lhdCI6MTcyODE4MDE0NX0.r7Ph0qeLzXoUQxNMxO8Q6vAsjLOVfodK-v7HpEh1XGU';
 
-        // Get the query parameters from the request
+        // Get the query parameters from the request, set page_size to 1200
         $params = [
             'page' => $request->get('page', 1),
-            'page_size' => $request->get('page_size', 10),
+            'page_size' => 3000,
             'emp_code' => $request->get('emp_code'),
             'terminal_sn' => $request->get('terminal_sn'),
             'terminal_alias' => $request->get('terminal_alias'),
