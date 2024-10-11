@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\EmployeeController;
 use App\Http\Controllers\TransactionController;
+use App\Http\Controllers\EmployeeLogController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,3 +35,4 @@ Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 Route::get('/employees', [EmployeeController::class, 'index'])->name('employees.index');
 Route::get('/transactions', [TransactionController::class, 'index'])->name('transactions.index');
 Route::get('/fetch-employees', [EmployeeController::class, 'index']);
+Route::get('/employee_log', [EmployeeLogController::class, 'index']);

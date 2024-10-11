@@ -38,6 +38,16 @@
         </a>
     </li>
 
+      <!-- Nav Item - Employee Logs -->
+      <li class="nav-item">
+    <a class="nav-link" href="{{ url('employee_log') }}">
+        <i class="fas fa-fw fa-clock"></i>
+        <span>Logs</span>
+    </a>
+</li>
+
+
+
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
 

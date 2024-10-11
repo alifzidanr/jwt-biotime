@@ -9,7 +9,7 @@ class CreateTransactionsTable extends Migration
     public function up()
     {
         Schema::create('transactions', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // This creates an auto-incrementing primary key
             $table->string('emp_code');
             $table->string('first_name')->nullable();
             $table->string('last_name')->nullable();
